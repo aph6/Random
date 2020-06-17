@@ -13,6 +13,11 @@ namespace Assets.Scripts
         public float Duration => duration;
         public UnityEvent OnTimerEnd { get => onTimerEnd; set => onTimerEnd = value; }
 
+        private void OnEnable()
+        {
+            
+        }
+
         private void Start()
         {
 

@@ -21,8 +21,7 @@ namespace Assets.Scripts
 
             else
             {
-                player.OnTurnEnded();
-                player.TimerBehaviour.ResetTimer();
+                player.TimerBehaviour .ResetTimer();
                 player.CurrentPhase = 0;
                 player.InTurn = false;
                 player.SetState(new IdleState(player));

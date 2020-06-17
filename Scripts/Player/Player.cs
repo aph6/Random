@@ -14,8 +14,6 @@ public class Player : MonoBehaviour
     public bool InCoroutine { get; set; } = false;
     public bool InTurn { get; set; } = false;
 
-    public event EventHandler TurnEnded;
-
     private void Start() => SetState(new IdleState(this));
 
     private void Update() => _currentState.Tick();
@@ -35,11 +33,6 @@ public class Player : MonoBehaviour
     {
         _currentState.SetMoves(MoveTokens);
         InTurn = true;
-    }
-
-    public void OnTurnEnded()
-    {
-        TurnEnded?.Invoke(this, EventArgs.Empty);
     }
 
 }
